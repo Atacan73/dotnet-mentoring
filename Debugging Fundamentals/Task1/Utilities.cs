@@ -10,6 +10,8 @@ namespace Task1
         /// <param name="numbers">Numbers to sort.</param>
         public static void Sort(int[] numbers)
         {
+            // add exception handling
+            // ask question about discards
             _ = numbers ?? throw new ArgumentNullException(nameof(numbers));
             int temp;
             for (int i = 0; i < numbers.Length; i++)
@@ -18,6 +20,7 @@ namespace Task1
                 {
                     if (numbers[i] > numbers[j])
                     {
+                        //fix bubbleSort algorithm
                         temp = numbers[i];
                         numbers[i] = numbers[j];
                         numbers[j] = temp;
@@ -36,8 +39,11 @@ namespace Task1
         /// otherwise -1.</returns>
         public static int IndexOf(Product[] products, Predicate<Product> predicate)
         {
+            // add exception handling
+            // ask question about discards
             _ = products ?? throw new ArgumentNullException(nameof(products));
             _ = predicate ?? throw new ArgumentNullException(nameof(predicate));
+            // fix out of bonds error
             for (int i = 0; i < products.Length; i++)
             {
                 var product = products[i];

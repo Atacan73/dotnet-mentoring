@@ -12,6 +12,7 @@
 
         public double Price { get; set; }
 
+        // create a func to check if objects equal
         public bool Equals(Product product)
         {
             if (product == null)
