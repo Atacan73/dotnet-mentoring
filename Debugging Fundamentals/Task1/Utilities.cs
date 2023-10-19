@@ -16,11 +16,11 @@ namespace Task1
             {
                 for (int j = i; j < numbers.Length; j++)
                 {
-                    if (numbers[i] < numbers[j])
+                    if (numbers[i] > numbers[j])
                     {
                         temp = numbers[i];
-                        numbers[i] = temp;
-                        numbers[j] = numbers[i];
+                        numbers[i] = numbers[j];
+                        numbers[j] = temp;
                     }
                 }
             }
