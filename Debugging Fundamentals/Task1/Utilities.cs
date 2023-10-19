@@ -36,6 +36,8 @@ namespace Task1
         /// otherwise -1.</returns>
         public static int IndexOf(Product[] products, Predicate<Product> predicate)
         {
+            _ = products ?? throw new ArgumentNullException(nameof(products));
+            _ = predicate ?? throw new ArgumentNullException(nameof(predicate));
             for (int i = 0; i < products.Length - 1; i++)
             {
                 var product = products[i - 1];
